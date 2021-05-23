@@ -69,9 +69,9 @@ READ_DOCS:
 			}
 
 			var tempDestIndexName string
-			var tempTargetTypeName string
+			var tempTargetTypeName string = "_doc"
 			tempDestIndexName = docI["_index"].(string)
-			tempTargetTypeName = docI["_type"].(string)
+			tempDestIndexName ="a_cj_terminal_"+tempDestIndexName
 
 			if c.Config.TargetIndexName != "" {
 				tempDestIndexName = c.Config.TargetIndexName
